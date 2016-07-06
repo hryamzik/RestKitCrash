@@ -24,4 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)getData:(id)sender {
+//    NSManagedObjectContext *managedObjectContext = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"json" parameters:nil
+                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  NSLog(@"Success");
+                                              } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                  NSLog(@"Failed");
+                                              }];
+}
+
 @end

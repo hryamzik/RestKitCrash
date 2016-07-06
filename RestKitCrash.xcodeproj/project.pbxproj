@@ -19,6 +19,8 @@
 		E5C4487B1D2CFD1900923EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C448791D2CFD1900923EBE /* LaunchScreen.storyboard */; };
 		E5C448861D2CFD1900923EBE /* RestKitCrashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448851D2CFD1900923EBE /* RestKitCrashTests.m */; };
 		E5C448911D2CFD1900923EBE /* RestKitCrashUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448901D2CFD1900923EBE /* RestKitCrashUITests.m */; };
+		E5C448B71D2D107E00923EBE /* Address+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448B41D2D107E00923EBE /* Address+CoreDataProperties.m */; };
+		E5C448B81D2D107E00923EBE /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448B61D2D107E00923EBE /* Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		E5C448901D2CFD1900923EBE /* RestKitCrashUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestKitCrashUITests.m; sourceTree = "<group>"; };
 		E5C448921D2CFD1900923EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C4489E1D2CFFA200923EBE /* RestKitCrash-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RestKitCrash-Prefix.pch"; sourceTree = "<group>"; };
+		E5C448B31D2D107E00923EBE /* Address+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E5C448B41D2D107E00923EBE /* Address+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E5C448B51D2D107E00923EBE /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		E5C448B61D2D107E00923EBE /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		F741FE1A849358170BABC450 /* Pods-RestKitCrashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestKitCrashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestKitCrashUITests/Pods-RestKitCrashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC70F947E7ED1090014450AB /* Pods-RestKitCrashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestKitCrashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestKitCrashUITests/Pods-RestKitCrashUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +159,7 @@
 				E5C448791D2CFD1900923EBE /* LaunchScreen.storyboard */,
 				E5C4487C1D2CFD1900923EBE /* Info.plist */,
 				E5C448741D2CFD1900923EBE /* RestKitCrash.xcdatamodeld */,
+				E5C448A61D2D0FFC00923EBE /* Model */,
 				E5C448681D2CFD1900923EBE /* Supporting Files */,
 			);
 			path = RestKitCrash;
@@ -184,6 +191,17 @@
 			);
 			path = RestKitCrashUITests;
 			sourceTree = "<group>";
+		};
+		E5C448A61D2D0FFC00923EBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5C448B31D2D107E00923EBE /* Address+CoreDataProperties.h */,
+				E5C448B41D2D107E00923EBE /* Address+CoreDataProperties.m */,
+				E5C448B51D2D107E00923EBE /* Address.h */,
+				E5C448B61D2D107E00923EBE /* Address.m */,
+			);
+			path = Model;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -446,8 +464,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C448B81D2D107E00923EBE /* Address.m in Sources */,
 				E5C448761D2CFD1900923EBE /* RestKitCrash.xcdatamodeld in Sources */,
 				E5C448701D2CFD1900923EBE /* ViewController.m in Sources */,
+				E5C448B71D2D107E00923EBE /* Address+CoreDataProperties.m in Sources */,
 				E5C4486D1D2CFD1900923EBE /* AppDelegate.m in Sources */,
 				E5C4486A1D2CFD1900923EBE /* main.m in Sources */,
 			);

@@ -17,6 +17,55 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSError *error = nil;
+    NSURL *modelURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"RestKitCrash" ofType:@"momd"]];
+    // NOTE: Due to an iOS 5 bug, the managed object model returned is immutable.
+    NSManagedObjectModel *managedObjectModel = [[[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL] mutableCopy];
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    
+    // Initialize the Core Data stack
+    [managedObjectStore createPersistentStoreCoordinator];
+    
+    NSPersistentStore __unused *persistentStore = [managedObjectStore addInMemoryPersistentStore:&error];
+    NSAssert(persistentStore, @"Failed to add persistent store: %@", error);
+    
+    [managedObjectStore createManagedObjectContexts];
+    
+    // Set the default store shared instance
+    [RKManagedObjectStore setDefaultStore:managedObjectStore];
+    
+    
+    
+    // Configure the object manager
+    
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"https://ifconfig.co/"]];
+    
+    objectManager.managedObjectStore = managedObjectStore;
+    
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/html"];
+    [objectManager setAcceptHeaderWithMIMEType:@"text/html"];
+    
+    
+    [RKObjectManager setSharedManager:objectManager];
+    
+#pragma mark entity mapping
+    
+    RKEntityMapping *ipMapping = [RKEntityMapping mappingForEntityForName:@"Address" inManagedObjectStore:managedObjectStore];
+    [ipMapping addAttributeMappingsFromDictionary:@{
+                                                      @"city":     @"city",
+                                                      @"country":  @"country",
+                                                      @"hostname": @"hostname",
+                                                      @"ip":       @"ip",
+                                                      }];
+    ipMapping.identificationAttributes = @[@"ip"];
+    
+    [objectManager addResponseDescriptor:[RKResponseDescriptor responseDescriptorWithMapping:ipMapping
+                                                                                      method:RKRequestMethodAny
+                                                                                 pathPattern:@"json"
+                                                                                     keyPath:nil
+                                                                                 statusCodes:RKCacheableStatusCodes()]];
+    
     return YES;
 }
 
