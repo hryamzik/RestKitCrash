@@ -22,6 +22,12 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    NSLog(@"awakeFromNib");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -44,7 +50,7 @@
     Address *address = [Address addressInManagedObjectContext:self.managedObjectContext];
     //    [_creditsButton setTitle:[NSString stringWithFormat:@"%.2f", [user.credit floatValue]] forState:UIControlStateNormal];
     //    [_unseenSpecialsButton setTitle:[NSString stringWithFormat:@"%@", user.newSpecials] forState:UIControlStateNormal];
-    _cityLabel.text = address.city;
+    _cityLabel.text = [NSString stringWithFormat:@"%@", address.city];
 }
 
 #pragma mark - Fetched results controller
@@ -91,7 +97,7 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     NSLog(@"updated:'%@'", anObject);
-    _cityLabel.text = [anObject valueForKey:@"city"];
+    _cityLabel.text = [NSString stringWithFormat:@"%@", [anObject valueForKey:@"city"]];
 }
 
 

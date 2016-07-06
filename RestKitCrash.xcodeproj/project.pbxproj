@@ -639,7 +639,7 @@
 				);
 				INFOPLIST_FILE = RestKitCrash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = brand.cash.RestKitCrash;
+				PRODUCT_BUNDLE_IDENTIFIER = github.RestKitCrash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -663,7 +663,7 @@
 				);
 				INFOPLIST_FILE = RestKitCrash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = brand.cash.RestKitCrash;
+				PRODUCT_BUNDLE_IDENTIFIER = github.RestKitCrash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

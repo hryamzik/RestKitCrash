@@ -65,7 +65,11 @@
                                                                                  pathPattern:@"json"
                                                                                      keyPath:nil
                                                                                  statusCodes:RKCacheableStatusCodes()]];
-   
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    
     return YES;
 }
 
