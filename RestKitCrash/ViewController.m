@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fetchedResultsController];
+    [self getData:nil];
+    [self updateViewData];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,6 +38,13 @@
                                               } failure:^(RKObjectRequestOperation *operation, NSError *error) {
                                                   NSLog(@"Failed");
                                               }];
+}
+
+- (void)updateViewData {
+    Address *address = [Address addressInManagedObjectContext:self.managedObjectContext];
+    //    [_creditsButton setTitle:[NSString stringWithFormat:@"%.2f", [user.credit floatValue]] forState:UIControlStateNormal];
+    //    [_unseenSpecialsButton setTitle:[NSString stringWithFormat:@"%@", user.newSpecials] forState:UIControlStateNormal];
+    _cityLabel.text = address.city;
 }
 
 #pragma mark - Fetched results controller
@@ -82,6 +91,7 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     NSLog(@"updated:'%@'", anObject);
+    _cityLabel.text = [anObject valueForKey:@"city"];
 }
 
 

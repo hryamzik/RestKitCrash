@@ -21,6 +21,8 @@
 		E5C448911D2CFD1900923EBE /* RestKitCrashUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448901D2CFD1900923EBE /* RestKitCrashUITests.m */; };
 		E5C448B71D2D107E00923EBE /* Address+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448B41D2D107E00923EBE /* Address+CoreDataProperties.m */; };
 		E5C448B81D2D107E00923EBE /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448B61D2D107E00923EBE /* Address.m */; };
+		E5C448BE1D2D22B300923EBE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448BD1D2D22B300923EBE /* MenuViewController.m */; };
+		E5C448C11D2D2E9E00923EBE /* Address+Access.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C448C01D2D2E9E00923EBE /* Address+Access.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		E5C448B41D2D107E00923EBE /* Address+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E5C448B51D2D107E00923EBE /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		E5C448B61D2D107E00923EBE /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		E5C448BC1D2D22B300923EBE /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		E5C448BD1D2D22B300923EBE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		E5C448BF1D2D2E9E00923EBE /* Address+Access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address+Access.h"; sourceTree = "<group>"; };
+		E5C448C01D2D2E9E00923EBE /* Address+Access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address+Access.m"; sourceTree = "<group>"; };
 		F741FE1A849358170BABC450 /* Pods-RestKitCrashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestKitCrashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestKitCrashUITests/Pods-RestKitCrashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC70F947E7ED1090014450AB /* Pods-RestKitCrashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestKitCrashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestKitCrashUITests/Pods-RestKitCrashUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +160,8 @@
 				E5C4486C1D2CFD1900923EBE /* AppDelegate.m */,
 				E5C4486E1D2CFD1900923EBE /* ViewController.h */,
 				E5C4486F1D2CFD1900923EBE /* ViewController.m */,
+				E5C448BC1D2D22B300923EBE /* MenuViewController.h */,
+				E5C448BD1D2D22B300923EBE /* MenuViewController.m */,
 				E5C448711D2CFD1900923EBE /* Main.storyboard */,
 				E5C448771D2CFD1900923EBE /* Assets.xcassets */,
 				E5C448791D2CFD1900923EBE /* LaunchScreen.storyboard */,
@@ -199,6 +207,8 @@
 				E5C448B41D2D107E00923EBE /* Address+CoreDataProperties.m */,
 				E5C448B51D2D107E00923EBE /* Address.h */,
 				E5C448B61D2D107E00923EBE /* Address.m */,
+				E5C448BF1D2D2E9E00923EBE /* Address+Access.h */,
+				E5C448C01D2D2E9E00923EBE /* Address+Access.m */,
 			);
 			path = Model;
 			sourceTree = SOURCE_ROOT;
@@ -468,7 +478,9 @@
 				E5C448761D2CFD1900923EBE /* RestKitCrash.xcdatamodeld in Sources */,
 				E5C448701D2CFD1900923EBE /* ViewController.m in Sources */,
 				E5C448B71D2D107E00923EBE /* Address+CoreDataProperties.m in Sources */,
+				E5C448BE1D2D22B300923EBE /* MenuViewController.m in Sources */,
 				E5C4486D1D2CFD1900923EBE /* AppDelegate.m in Sources */,
+				E5C448C11D2D2E9E00923EBE /* Address+Access.m in Sources */,
 				E5C4486A1D2CFD1900923EBE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
