@@ -63,6 +63,7 @@
 		E5C4488C1D2CFD1900923EBE /* RestKitCrashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestKitCrashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C448901D2CFD1900923EBE /* RestKitCrashUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestKitCrashUITests.m; sourceTree = "<group>"; };
 		E5C448921D2CFD1900923EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C4489E1D2CFFA200923EBE /* RestKitCrash-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RestKitCrash-Prefix.pch"; sourceTree = "<group>"; };
 		F741FE1A849358170BABC450 /* Pods-RestKitCrashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestKitCrashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestKitCrashUITests/Pods-RestKitCrashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC70F947E7ED1090014450AB /* Pods-RestKitCrashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestKitCrashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestKitCrashUITests/Pods-RestKitCrashUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				E5C448691D2CFD1900923EBE /* main.m */,
+				E5C4489E1D2CFFA200923EBE /* RestKitCrash-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -591,6 +593,7 @@
 			baseConfigurationReference = B73671F7385F27F48C581C3D /* Pods-RestKitCrash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/RestKitCrash-Prefix.pch";
 				INFOPLIST_FILE = RestKitCrash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = brand.cash.RestKitCrash;
@@ -603,6 +606,7 @@
 			baseConfigurationReference = 1890E4A78E2E793212BB6D5C /* Pods-RestKitCrash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/RestKitCrash-Prefix.pch";
 				INFOPLIST_FILE = RestKitCrash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = brand.cash.RestKitCrash;

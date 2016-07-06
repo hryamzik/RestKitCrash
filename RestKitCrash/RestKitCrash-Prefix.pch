@@ -1,0 +1,27 @@
+//
+//  RestKitCrash-Prefix.pch
+//  RestKitCrash
+//
+//  Created by Roman Belyakovsky on 06/07/16.
+//  Copyright © 2016 brandcash. All rights reserved.
+//
+
+#ifndef RestKitCrash_Prefix_pch
+#define RestKitCrash_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#else
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <CoreServices/CoreServices.h>
+#endif
+
+#import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
+
+#endif /* RestKitCrash_Prefix_pch */
